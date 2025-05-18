@@ -8,6 +8,7 @@ target/
 .idea/jarRepositories.xml
 .idea/compiler.xml
 .idea/libraries/
+.idea/dictionaries/
 *.iws
 *.iml
 *.ipr
@@ -36,5 +37,3 @@ build/
 
 ### Mac OS ###
 .DS_Store
-.idea/dictionaries/
-/.idea/dictionaries/
