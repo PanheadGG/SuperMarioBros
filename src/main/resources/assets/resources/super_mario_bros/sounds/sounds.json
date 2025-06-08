@@ -1,0 +1,70 @@
+{
+  "music.background.main": {
+    "type": "music",
+    "src": "sounds/music/main_theme.ogg"
+  },
+  "music.background.speed_up": {
+    "type": "music",
+    "src": "sounds/music/main_theme_speed_up.ogg"
+  },
+  "music.background.starman": {
+    "type": "music",
+    "src": "sounds/music/starman.ogg"
+  },
+  "sound.mario.death": {
+    "type": "music",
+    "src": "sounds/clips/mario/death.wav"
+  },
+  "sound.mario.jump": {
+    "type": "clip",
+    "src": "sounds/clips/mario/small_jump.wav"
+  },
+  "sound.mario.super.jump": {
+    "type": "clip",
+    "src": "sounds/clips/mario/big_jump.wav"
+  },
+  "sound.mario.stomp": {
+    "type": "clip",
+    "src": "sounds/clips/mario/stomp.wav"
+  },
+  "sound.mario.coin": {
+    "type": "clip",
+    "src": "sounds/clips/mario/coin.wav"
+  },
+  "sound.brick.smash": {
+    "type": "clip",
+    "src": "sounds/clips/blocks/brick_smash.wav"
+  },
+  "sound.block.bump": {
+    "type": "clip",
+    "src": "sounds/clips/blocks/bump.wav"
+  },
+  "sound.prop.appears": {
+    "type": "clip",
+    "src": "sounds/clips/props/appears.wav"
+  },
+  "sound.prop.kick": {
+    "type": "clip",
+    "src": "sounds/clips/props/kick.wav"
+  },
+  "sound.mario.level_up": {
+    "type": "clip",
+    "src": "sounds/clips/mario/level_up.wav"
+  },
+  "sound.clip.count_down": {
+    "type": "clip",
+    "src": "sounds/clips/count_down.wav"
+  },
+  "music.stage_clear": {
+    "type": "music",
+    "src": "sounds/music/stage_clear.wav"
+  },
+  "music.game_over": {
+    "type": "music",
+    "src": "sounds/music/game_over.wav"
+  },
+  "music.out_of_time": {
+    "type": "music",
+    "src": "sounds/music/out_of_time.wav"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "type": "sprite",
+  "columns": 5,
+  "src": "textures/blocks/lucky_block_before.png",
+  "fps": 5
+}

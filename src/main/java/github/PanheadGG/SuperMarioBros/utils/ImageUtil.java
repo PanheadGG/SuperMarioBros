@@ -1,6 +1,6 @@
 package github.PanheadGG.SuperMarioBros.utils;
 
-import github.PanheadGG.SuperMarioBros.assets.Asset;
+import github.PanheadGG.SuperMarioBros.assets.Assets;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -18,7 +18,7 @@ public class ImageUtil {
      * @param flipType 翻转类型（1水平翻转，2垂直翻转）默认为1
      */
     public static BufferedImage mirror(BufferedImage source, int flipType) {
-        if(source==null) return Asset.UNKNOWN_TEXTURE;
+        if(source==null) return Assets.UNKNOWN_TEXTURE;
         int width = source.getWidth();
         int height = source.getHeight();
         BufferedImage result = new BufferedImage(width, height, source.getType());
@@ -40,7 +40,7 @@ public class ImageUtil {
         try {
             source.getSubimage(32, 32, 16, 16);
         } catch (RasterFormatException e) {
-            return Asset.UNKNOWN_TEXTURE;
+            return Assets.UNKNOWN_TEXTURE;
         }
         return source.getSubimage(x, y, width, height);
     }

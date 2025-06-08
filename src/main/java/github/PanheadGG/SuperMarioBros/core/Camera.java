@@ -1,5 +1,6 @@
 package github.PanheadGG.SuperMarioBros.core;
 
+import github.PanheadGG.SuperMarioBros.core.scene.GameEngine;
 import github.PanheadGG.SuperMarioBros.model.entity.player.Player;
 
 public class Camera {

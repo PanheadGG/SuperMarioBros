@@ -1,0 +1,6 @@
+{
+  "type": "sprite",
+  "columns": 4,
+  "src": "textures/entity/mario/mario_star_jump.png",
+  "fps": 36
+}

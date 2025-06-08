@@ -1,0 +1,6 @@
+{
+  "type": "sprite",
+  "columns": 3,
+  "src": "textures/items/boom.png",
+  "fps": 6
+}

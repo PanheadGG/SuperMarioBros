@@ -1,5 +1,5 @@
 # 超级马里奥兄弟Java版
 
-Language [ 简体中文 | [English](Readme.en.md) ]
-
 经典游戏超级马里奥Java版
+
+此为个人Java大作业源码，并未完成完整游戏，代码仅供参考

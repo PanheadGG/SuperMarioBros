@@ -1,0 +1,6 @@
+{
+  "type": "sprite",
+  "columns": 3,
+  "src": "textures/entity/mario/walk.png",
+  "fps": 18
+}

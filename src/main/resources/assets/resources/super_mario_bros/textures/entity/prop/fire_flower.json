@@ -1,0 +1,6 @@
+{
+  "type": "sprite",
+  "columns": 4,
+  "src": "textures/entity/prop/fire_flower.png",
+  "fps": 12
+}

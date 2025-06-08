@@ -1,0 +1,6 @@
+{
+  "type": "sprite",
+  "columns": 4,
+  "src": "textures/items/coin.png",
+  "fps": 8
+}

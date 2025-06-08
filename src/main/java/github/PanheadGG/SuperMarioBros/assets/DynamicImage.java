@@ -12,13 +12,14 @@ public class DynamicImage {
 
     public DynamicImage(BufferedImage[] images, int gameTickRate, int rate) {
         this.images = images;
-        this.gameTickRate = gameTickRate;
+        this.gameTickRate = Math.max(1,gameTickRate);
         tick = 0;
         this.rate = rate;
     }
 
     public DynamicImage(BufferedImage[] images, int rate) {
         this.images = images;
+        this.gameTickRate = 1;
         tick = 0;
         this.rate = rate;
     }
@@ -42,7 +43,7 @@ public class DynamicImage {
     }
 
     public void setGameTickRate(int gameTickRate) {
-        this.gameTickRate = gameTickRate;
+        this.gameTickRate = Math.max(1,gameTickRate);
     }
 
     public void update() {
@@ -70,7 +71,6 @@ public class DynamicImage {
      *
      * @param source   图片源 （为优化内存，原图将会关闭。保留最新的指针）
      * @param flipType 翻转类型（1水平翻转，2垂直翻转）默认为1
-     * @return
      */
     public static BufferedImage mirror(BufferedImage source, Integer flipType) {
         int width = source.getWidth();
@@ -89,5 +89,9 @@ public class DynamicImage {
             source.flush();
         }
         return result;
+    }
+
+    public BufferedImage get(int index) {
+        return images[index%images.length];
     }
 }

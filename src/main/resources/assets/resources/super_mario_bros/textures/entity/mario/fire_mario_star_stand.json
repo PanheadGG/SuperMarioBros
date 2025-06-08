@@ -1,0 +1,6 @@
+{
+  "type": "sprite",
+  "columns": 4,
+  "src": "textures/entity/mario/fire_mario_star_stand.png",
+  "fps": 36
+}

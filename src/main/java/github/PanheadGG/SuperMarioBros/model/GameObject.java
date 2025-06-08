@@ -1,6 +1,6 @@
 package github.PanheadGG.SuperMarioBros.model;
 
-import github.PanheadGG.SuperMarioBros.assets.Asset;
+import github.PanheadGG.SuperMarioBros.assets.Assets;
 import github.PanheadGG.SuperMarioBros.assets.DynamicImage;
 import github.PanheadGG.SuperMarioBros.core.Camera;
 import github.PanheadGG.SuperMarioBros.utils.ImageUtil;
@@ -121,22 +121,34 @@ public abstract class GameObject implements Comparable {
     }
 
     public BufferedImage getCurrentTexture() {
+        BufferedImage image = null;
         switch (imageType) {
             case STATIC:
-                if (reverseDirection) return mirror(bufferedImage, ImageUtil.FlipType.HORIZONTAL);
-                else return bufferedImage;
+                if (reverseDirection) image = mirror(bufferedImage, ImageUtil.FlipType.HORIZONTAL);
+                else image =  bufferedImage;
+                break;
             case DYNAMIC:
-                if (reverseDirection) return mirror(animatedImage.getTexture(), ImageUtil.FlipType.HORIZONTAL);
-                else return animatedImage.getTexture();
+                if(animatedImage==null) return Assets.UNKNOWN_TEXTURE;
+                if (reverseDirection) image = mirror(animatedImage.getTexture(), ImageUtil.FlipType.HORIZONTAL);
+                else image = (animatedImage.getTexture()==null)?Assets.UNKNOWN_TEXTURE:animatedImage.getTexture();
+                break;
             case UNKNOWN:
             default:
-                return Asset.UNKNOWN_TEXTURE;
+                image = Assets.UNKNOWN_TEXTURE;
+                break;
         }
+        return image==null?Assets.UNKNOWN_TEXTURE:image;
     }
 
     public void setGameTickRate(int gameTickRate) {
         this.gameTickRate = gameTickRate;
-        if (animatedImage != null) setGameTickRate(gameTickRate);
+        if (animatedImage != null) {
+            animatedImage.setGameTickRate(gameTickRate);
+        }
+    }
+
+    public int getGameTickRate() {
+        return gameTickRate;
     }
 
     public double getX() {
@@ -294,6 +306,16 @@ public abstract class GameObject implements Comparable {
             pixelHeight = image.getHeight();
         }
     }
+    public void setTexture(DynamicImage image,int tps) {
+        this.animatedImage = image;
+        image.setGameTickRate(tps);
+        this.bufferedImage = null;
+        imageType = ImageType.DYNAMIC;
+        if (pixelWidth == -1 || pixelHeight == -1) {
+            pixelWidth = image.getWidth();
+            pixelHeight = image.getHeight();
+        }
+    }
 
     public void setTexture(BufferedImage image) {
         this.animatedImage = null;
@@ -425,4 +447,5 @@ public abstract class GameObject implements Comparable {
         }
         return false;
     }
+
 }

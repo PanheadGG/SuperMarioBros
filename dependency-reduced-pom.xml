@@ -26,7 +26,7 @@
               </filters>
               <transformers>
                 <transformer>
-                  <mainClass>github.PanheadGG.SuperMarioBros.core.GameEngine</mainClass>
+                  <mainClass>github.PanheadGG.SuperMarioBros.core.scene.GameEngine</mainClass>
                 </transformer>
               </transformers>
             </configuration>

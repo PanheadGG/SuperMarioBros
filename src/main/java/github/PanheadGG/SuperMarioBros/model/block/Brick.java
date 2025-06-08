@@ -1,17 +1,53 @@
 package github.PanheadGG.SuperMarioBros.model.block;
 
-import github.PanheadGG.SuperMarioBros.assets.Asset;
+import github.PanheadGG.SuperMarioBros.assets.Assets;
 import github.PanheadGG.SuperMarioBros.assets.DynamicImage;
-import github.PanheadGG.SuperMarioBros.utils.ImageUtil;
 
 import java.awt.image.BufferedImage;
 
-public class Brick extends Block implements Breakable{
-    public Brick(int pixelPerUnit, double x,double y){
-        super(pixelPerUnit);
+public class Brick extends Block implements Breakable, Reward {
+    private String[] rewards;
+    private int rewardIndex = 0;
+    private boolean hasReward;
+    private boolean canBeBroken;
+
+    @Override
+    public boolean hasRewards() {
+        return hasReward;
+    }
+
+    @Override
+    public String nextReward() {
+        if (rewardIndex >= rewards.length) {
+            canCrashed = false;
+            return "";
+        }
+        if (rewardIndex == rewards.length - 1) {
+            if (hasReward) {
+                setRewardedTexture();
+                setCanCrashed(false);
+            }
+            return rewards[rewardIndex++];
+        }
+        return rewards[rewardIndex++];
+    }
+
+    public Brick(int pixelPerUnit, int gameTickRate ,double x, double y) {
+        super(gameTickRate, pixelPerUnit);
+        canBeBroken = true;
+        hasReward = false;
+        originY = y;
+        setPosition(x, y);
         init();
-        setX(x);
-        setY(y);
+    }
+    public Brick(int pixelPerUnit,int gameTickRate, double x, double y, String[] rewards) {
+        super(gameTickRate,pixelPerUnit);
+        canBeBroken = false;
+        hasReward = true;
+        originY = y;
+        this.rewards = rewards;
+        setPosition(x, y);
+        init();
     }
 
     public Brick(int pixelPerUnit) {
@@ -33,11 +69,19 @@ public class Brick extends Block implements Breakable{
         super(image, gameTickRate, pixelPerUnit);
         init();
     }
-    private void init(){
-        BufferedImage image = Asset.getImage(Asset.TILES_IMAGE);
-        BufferedImage image1 = ImageUtil.getSubImage(image,0, 0, 16, 16);
-        setTexture(image1);
+
+    private void init() {
+        setTexture(Assets.getImageByKey("texture.block.brick"));
         setWidth(1);
         setHeight(1);
+    }
+
+    public void setRewardedTexture() {
+        setTexture(Assets.getImageByKey("texture.block.lucky.after"));
+    }
+
+    @Override
+    public boolean canBeBroken() {
+        return canBeBroken;
     }
 }

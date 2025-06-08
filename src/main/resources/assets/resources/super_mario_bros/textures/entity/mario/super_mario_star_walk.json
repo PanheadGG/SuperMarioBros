@@ -1,0 +1,6 @@
+{
+  "type": "sprite",
+  "columns": 12,
+  "src": "textures/entity/mario/super_mario_star_walk.png",
+  "fps": 36
+}

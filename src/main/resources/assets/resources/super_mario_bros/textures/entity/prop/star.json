@@ -1,0 +1,6 @@
+{
+  "type": "sprite",
+  "columns": 4,
+  "src": "textures/entity/prop/star.png",
+  "fps": 12
+}

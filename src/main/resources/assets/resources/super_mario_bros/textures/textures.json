@@ -1,0 +1,166 @@
+{
+  "texture.mario.stand": {
+    "type": "static",
+    "src": "textures/entity/mario/stand.png"
+  },
+  "texture.mario.jump": {
+    "type": "static",
+    "src": "textures/entity/mario/jump.png"
+  },
+  "texture.mario.walk": {
+    "type": "sprite",
+    "src": "textures/entity/mario/walk.json"
+  },
+  "texture.mario.dead": {
+    "type": "static",
+    "src": "textures/entity/mario/dead.png"
+  },
+  "texture.mario.star.stand": {
+    "type": "sprite",
+    "src": "textures/entity/mario/mario_star_stand.json"
+  },
+  "texture.mario.star.jump": {
+    "type": "sprite",
+    "src": "textures/entity/mario/mario_star_jump.json"
+  },
+  "texture.mario.star.walk": {
+    "type": "sprite",
+    "src": "textures/entity/mario/mario_star_walk.json"
+  },
+  "texture.mario.super.stand": {
+    "type": "static",
+    "src": "textures/entity/mario/super_mario_stand.png"
+  },
+  "texture.mario.super.jump": {
+    "type": "static",
+    "src": "textures/entity/mario/super_mario_jump.png"
+  },
+  "texture.mario.super.walk": {
+    "type": "sprite",
+    "src": "textures/entity/mario/super_mario_walk.json"
+  },
+  "texture.mario.super.star.stand": {
+    "type": "sprite",
+    "src": "textures/entity/mario/super_mario_star_stand.json"
+  },
+  "texture.mario.super.star.jump": {
+    "type": "sprite",
+    "src": "textures/entity/mario/super_mario_star_jump.json"
+  },
+  "texture.mario.super.star.walk": {
+    "type": "sprite",
+    "src": "textures/entity/mario/super_mario_star_walk.json"
+  },
+  "texture.mario.fire.stand": {
+    "type": "static",
+    "src": "textures/entity/mario/fire_mario_stand.png"
+  },
+  "texture.mario.fire.jump": {
+    "type": "static",
+    "src": "textures/entity/mario/fire_mario_jump.png"
+  },
+  "texture.mario.fire.walk": {
+    "type": "sprite",
+    "src": "textures/entity/mario/fire_mario_walk.json"
+  },
+  "texture.mario.fire.star.stand": {
+    "type": "sprite",
+    "src": "textures/entity/mario/fire_mario_star_stand.json"
+  },
+  "texture.mario.fire.star.jump": {
+    "type": "sprite",
+    "src": "textures/entity/mario/fire_mario_star_jump.json"
+  },
+  "texture.mario.fire.star.walk": {
+    "type": "sprite",
+    "src": "textures/entity/mario/fire_mario_star_walk.json"
+  },
+  "texture.enemy.goomba.walk": {
+    "type": "sprite",
+    "src": "textures/entity/enemy/goomba_walk.json"
+  },
+  "texture.enemy.goomba.squashed": {
+    "type": "static",
+    "src": "textures/entity/enemy/goomba_squashed.png"
+  },
+  "texture.enemy.koopa.walk": {
+    "type": "sprite",
+    "src": "textures/entity/enemy/koopa_walk.json"
+  },
+  "texture.enemy.koopa.shell": {
+    "type": "static",
+    "src": "textures/entity/enemy/koopa_shell.png"
+  },
+  "texture.prop.super_mushroom": {
+    "type": "static",
+    "src": "textures/entity/prop/super_mushroom.png"
+  },
+  "texture.prop.fire_flower": {
+    "type": "sprite",
+    "src": "textures/entity/prop/fire_flower.json"
+  },
+  "texture.prop.star": {
+    "type": "sprite",
+    "src": "textures/entity/prop/star.json"
+  },
+  "texture.prop.fire_ball": {
+    "type": "sprite",
+    "src": "textures/entity/prop/fire_ball.json"
+  },
+  "texture.tube.upper": {
+    "type": "static",
+    "src": "textures/blocks/tube_upper.png"
+  },
+  "texture.tube.lower": {
+    "type": "static",
+    "src": "textures/blocks/tube_lower.png"
+  },
+  "texture.block.brick": {
+    "type": "static",
+    "src": "textures/blocks/brick.png"
+  },
+  "texture.block.stone": {
+    "type": "static",
+    "src": "textures/blocks/stone.png"
+  },
+  "texture.block.lucky.before": {
+    "type": "sprite",
+    "src": "textures/blocks/lucky_block_before.json"
+  },
+  "texture.block.lucky.after": {
+    "type": "static",
+    "src": "textures/blocks/lucky_block_after.png"
+  },
+  "texture.block.stage": {
+    "type": "static",
+    "src": "textures/blocks/stage.png"
+  },
+  "texture.item.coin": {
+    "type": "sprite",
+    "src": "textures/items/coin.json"
+  },
+  "texture.item.score_coin": {
+    "type": "sprite",
+    "src": "textures/items/score_coin.json"
+  },
+  "texture.item.boom": {
+    "type": "sprite",
+    "src": "textures/items/boom.json"
+  },
+  "texture.item.plus": {
+    "type": "static",
+    "src": "textures/items/plus.png"
+  },
+  "texture.item.broken_brick": {
+    "type": "sprite",
+    "src": "textures/items/broken_brick.json"
+  },
+  "texture.item.castle": {
+    "type": "static",
+    "src": "textures/items/castle.png"
+  },
+  "texture.menu.logo": {
+    "type": "static",
+    "src": "textures/menu/logo.png"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "type": "sprite",
+  "columns": 2,
+  "src": "textures/entity/enemy/goomba_walk.png",
+  "fps": 8
+}

@@ -1,6 +1,8 @@
 package github.PanheadGG.SuperMarioBros.model.entity.enemy;
 
 import github.PanheadGG.SuperMarioBros.assets.DynamicImage;
+import github.PanheadGG.SuperMarioBros.model.item.Air;
+import github.PanheadGG.SuperMarioBros.model.GameObject;
 import github.PanheadGG.SuperMarioBros.model.entity.Entity;
 
 import java.awt.image.BufferedImage;
@@ -9,11 +11,14 @@ public abstract class Enemy extends Entity {
     protected boolean dead;
     protected int clearTime=1;
 
-    public enum Action {
-        LEFT, RIGHT, SQUASHED, UPSIDE_DOWN;
+    public static class Action {
+        public static final String LEFT = "left";
+        public static final String RIGHT = "right";
+        public static final String SQUASHED = "squashed";
+        public static final String UPSIDE_DOWN = "upside_down";
     }
 
-    public abstract void move(Action action);
+    public void move(String action){};
 
     public boolean isDead() {
         return dead;
@@ -42,5 +47,9 @@ public abstract class Enemy extends Entity {
     public void clearTime(){
         if (clearTime <= 0) needClear = true;
         clearTime--;
+    }
+
+    public GameObject getUpsideDownObj(){
+        return new Air();
     }
 }

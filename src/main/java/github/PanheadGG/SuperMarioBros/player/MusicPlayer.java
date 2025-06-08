@@ -4,7 +4,6 @@ import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-import github.PanheadGG.SuperMarioBros.assets.Asset;
 import github.PanheadGG.SuperMarioBros.timer.MicroTimer;
 import javazoom.spi.mpeg.sampled.file.MpegAudioFileReader;
 import javazoom.spi.vorbis.sampled.convert.VorbisFormatConversionProvider;
@@ -116,16 +115,6 @@ public class MusicPlayer {
     public void load(String path) {
         load(new File(path));
     }
-
-    public void load(Asset asset) {
-        URL url = asset.getURL();
-        if (url == null) {
-            System.err.println("Asset does not exist");
-            return;
-        }
-        load(url);
-    }
-
     private void load(AudioInputStream stream) throws Exception {
         if (playing) {
             stop();

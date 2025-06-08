@@ -1,9 +1,8 @@
 package github.PanheadGG.SuperMarioBros.map;
 
 import github.PanheadGG.SuperMarioBros.core.Camera;
-import github.PanheadGG.SuperMarioBros.core.GameEngine;
-import github.PanheadGG.SuperMarioBros.core.GameKeyListener;
-import github.PanheadGG.SuperMarioBros.core.GameUI;
+import github.PanheadGG.SuperMarioBros.core.scene.GameEngine;
+import github.PanheadGG.SuperMarioBros.listener.GameKeyListener;
 import github.PanheadGG.SuperMarioBros.model.entity.player.Player;
 
 import java.awt.*;
@@ -13,18 +12,26 @@ public abstract class GameMap {
     protected int mapWidth = 15;
     protected int mapHeight = 14;
     protected GameEngine engine;
-    protected int gameTickRate;
-    protected GameUI ui;
+    protected int gameTickRate=0;
     protected Camera camera;
     protected Player player;
     protected GameKeyListener key;
     protected Color backgroundColor = new Color(98,173,255);
+    protected String mapName = "";
     public GameMap(GameEngine engine){
         this.engine = engine;
         gameTickRate = engine.getGameTickRate();
         camera = new Camera(engine);
         key = new GameKeyListener();
         pixelPerUnit = engine.getPixelPerUnit();
+    }
+
+    public String getMapName() {
+        return mapName;
+    }
+
+    public void setMapName(String mapName) {
+        this.mapName = mapName;
     }
 
     public Color getBackgroundColor() {
@@ -60,9 +67,6 @@ public abstract class GameMap {
     }
 
     public void update(){}
-    public void afterCreateUI(){
-        ui = engine.getUi();
-    }
     public void drawFrame(Graphics g) {
     }
 

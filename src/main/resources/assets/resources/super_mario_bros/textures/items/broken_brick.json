@@ -1,0 +1,6 @@
+{
+  "type": "sprite",
+  "columns": 4,
+  "src": "textures/items/broken_brick.png",
+  "fps": 12
+}
